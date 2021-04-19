@@ -1,4 +1,4 @@
-# **Predicting Github Commit Disengagement**
+# **Predicting Github Developer Disengagement**
 
 ## 1.	Introduction
 
