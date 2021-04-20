@@ -38,7 +38,7 @@ Fig 2.2 Pre-Processed Dataset from Google BigQuery
 Table 2.1 Data Set High Level Overview
 
 | Business Opportunity | Status Quo  |
-| ---   | :-: |
+| ---   | --- |
 | Number of Records | 1,048,476 |
 | Time Period | June 2006 till October 2016 |
 | Number of Repos | 409 |
@@ -61,12 +61,11 @@ Fig 3.2 Rate of Change of Disengagements
 Hence, the research question of this analysis is ““Given a developer’s first six months of commit participation to a Github organization, can we effectively predict whether a developer will disengage in their first 3 years since their first commit to the organization’s Github open source platform?”
 
 ### 3.2 Factors Potentially Affecting Developers’ Departure
-Factors potentially affecting developer departure (talk about various potential factors like in paper, univariate and bivariate exploration)
 In this study, we consider a developer’s first six months of commit participation to the organization and extract 13 set of features along two dimensions, that might be correlated with developers’ engagement. Please refer to Jupyter Notebook for a detailed describtion on the meaning of each factor.
 
-Stability of Work Environment refers to factors that influence the working environment in the team managing the repository. Working environment might have a very important effect on a developer’s working experience. For example, the good collaboration with other members in the repository can improve a developer’s work efficiency and experience. For each month, we calculate the following measures of the repository which the developer is working for: number of new developers and number of absent developers for the repo. The number of changed developers within a repo might indicate the stability of the project. The developers often prefer stay at a stable project. We also count the number of developer changed in the project which a developer works for (total_repo_comm_absent total_repo_comm_new agg_absent_months new_ppl_months no_change_months ), since the stability of the project might have impact on the working experience of a developer. 
+**Stability of Work Environment** refers to factors that influence the working environment in the team managing the repository. Working environment might have a very important effect on a developer’s working experience. For example, the good collaboration with other members in the repository can improve a developer’s work efficiency and experience. For each month, we calculate the following measures of the repository which the developer is working for: number of new developers and number of absent developers for the repo. The number of changed developers within a repo might indicate the stability of the project. The developers often prefer stay at a stable project. We also count the number of developer changed in the project which a developer works for (total_repo_comm_absent total_repo_comm_new agg_absent_months new_ppl_months no_change_months ), since the stability of the project might have impact on the working experience of a developer. 
 
-Developer Workload refers to factors related to the workload of the developer. The workload of the developer is correlated to the number of commits performed by the developer. Developers are often asked to take heavy workload and have tight deadlines. Heavy workload might be a factor which affects a developer’s engagement. For each month, we calculate the following measures of the repository which the developer is working for: the number of project members (P(n)_repo_committers), the sum of commits of project members (P(n)_numb_commits_repo), and check whether a developer takes part in more than one project (P(n)_multi_ratio), The number of repo team members is an indicator of project size. Small project size usually means more workload to each individual in the project. The number of commits by project members could reflect the overall workload in the project.
+**Developer Workload** refers to factors related to the workload of the developer. The workload of the developer is correlated to the number of commits performed by the developer. Developers are often asked to take heavy workload and have tight deadlines. Heavy workload might be a factor which affects a developer’s engagement. For each month, we calculate the following measures of the repository which the developer is working for: the number of project members (P(n)_repo_committers), the sum of commits of project members (P(n)_numb_commits_repo), and check whether a developer takes part in more than one project (P(n)_multi_ratio), The number of repo team members is an indicator of project size. Small project size usually means more workload to each individual in the project. The number of commits by project members could reflect the overall workload in the project.
 
 ### 3.3 Data Exploration
 We find that there are no missing values in the data. Moreover, we also see that indeed, all repositories start with the word ‘apache’ signifying they are under the Apache organization. Not knowing exactly how the data is collected by Google BigQuery from Github, we recognize the possibility of erroneous entries in the data, which constitutes to random noise in our prediction models. We proceed to perform univariate and bivariate exploration of our dataset. Given the time-consuming nature of running queries in JuputerNotebook, we extract the spark dataframe into csv files, and use Tableau and Python Seaborn library only for data exploration purposes.
@@ -113,8 +112,8 @@ Table 4.2 – Confusion Matrix
 
 | Predicted 0 | Predicted 0  | Predicted 1  |
 | ---   | :-: |  :-: |
-| True 0 |  |   |
-| True 1 | 314,826 |  (AUC-ROCScore)	0.53 |
+| Actual 0 | 32,742 | 49,112  |
+| Actual 1 | 314,826 |  (AUC-ROCScore)	0.53 |
 
 
 
