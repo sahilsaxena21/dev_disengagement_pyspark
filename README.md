@@ -98,11 +98,25 @@ Fig 3.7. Pearson Correlation Plot
 ## 4.	Results
 For our commit activity data, we use our proposed factors to train a classifier to predict whether a developer will be disengaged after he/she performs the first commit in two years. The selected paper studies different classifiers, including Naive Bayes, Support Vector Machine (SVM), Decision Tree, K-Nearest Neighbor (kNN), and Random Forest. As the model metric, the selected paper interprets the model using the F1-score. For our analysis, we use the logistic regression model  and the AUC-ROC score as a basis to interpret the model results in the context of our research question. Note that due to technical limitations, only a subset of the features were used for the model, these are: 'no_change_periods',  'tot_repo_comm_absent',  'total_repo_comm_new',  'agg_absent_periods',  'new_ppl_periods' and  'avg_multi_ratio'.
 Table 4.1 below provides a summary of the results obtained. We observe that our models does not classify the dataset particularly well. The F1-score is 0.6. As a result, there is no evidence to ascertain the hypothesis of this analysis that that the magnitude of workload and the work environment stawhich  remains unconfirmed. 
+
+
 Table 4.1 – Model Evaluation
-Criteria	Value
-Train Set Size 	733,710
-Test Set Size	314,826
-Logistic Regression (AUC-ROCScore)	0.53
+
+| Criteria | Value  |
+| ---   | :-: |
+| Train Set Size | 733,710 |
+| Test Set Size | 314,826 |
+| Logistic Regression |  (AUC-ROC Score)	0.53 |
+
+
+Table 4.2 – Confusion Matrix
+
+| Predicted 0 | Predicted 0  | Predicted 1  |
+| ---   | :-: |  :-: |
+| True 0 |  |   |
+| True 1 | 314,826 |  (AUC-ROCScore)	0.53 |
+
+
 
 ## 5.	Conclusion
 In this paper, based on commit activity of Apache repositories extracted from Google BigQuery, we use data mining technique to investigate whether a developer will become disengaged within the first 2 years after he/she performs the first commit to the organization. The commit activity dataset we used contains about 1 million commits, performed by 7,000 developers in 400 Apache repositories in about 10 year period. Our study reveals the most effective classifier (i.e., random forest) for the prediction of developers’ departure was unable to identify relationships between the two dimensions of factors and developers’ disengagement. As future work, instead of just relying on changes in the number of commits to ascertain possible disengagement, the feature set of the model can be expanded to also include other forms of developer participation e.g. number of pull requests, issue resolutions and code reviews. These would help build a more comprehensive view of employee participation towards the organization. As a future work, it is also suggested to studying a greater number of Github organizations to further increase the number of observations in the dataset and hence, further strengthen the results of the analysis. 
