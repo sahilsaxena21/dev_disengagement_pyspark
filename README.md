@@ -23,8 +23,9 @@ The remainder of the paper is structured as follows. Section 2 describes the dat
 
 ## 2.	Data Preparation
 The dataset used was the commits table within the github_repos dataset available on Google BigQuery. We focus our analysis on the commit activity in repos within the Apache GitHub organization. Fig 2.1 provides an overview of the SQL code used to extract data from Google BigQuery. Fig 2.2 shows a snapshot of the pre-processed dataset. Table 2.1 provides a high level overview of the dataset.
+
 Fig 2.1 Google BigQuery Query
- 
+
 
 
 
@@ -35,10 +36,13 @@ Fig 2.2 Pre-Processed Dataset from Google BigQuery
  
 
 Table 2.1 Data Set High Level Overview
-Number of Records	1,048,476
-Time Period	June 2006 till October 2016
-Number of Repos	409
-Number of Committers	7165
+
+| Business Opportunity | Status Quo  |
+| ---   | :-: | :-: |
+| Number of Records | 1,048,476 |
+| Time Period | June 2006 till October 2016 |
+| Number of Repos | 409 |
+| Number of Committers | 7165 |
 
 Please refer to the Jupyter Notebook for a detailed discussion on the data preparation steps.
 
