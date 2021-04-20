@@ -38,7 +38,7 @@ Fig 2.2 Pre-Processed Dataset from Google BigQuery
 Table 2.1 Data Set High Level Overview
 
 | Business Opportunity | Status Quo  |
-| ---   | :-: | :-: |
+| ---   | :-: |
 | Number of Records | 1,048,476 |
 | Time Period | June 2006 till October 2016 |
 | Number of Repos | 409 |
