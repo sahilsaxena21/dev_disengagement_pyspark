@@ -106,7 +106,9 @@ Table 4.1 – Model Evaluation
 | ---   | :-: |
 | Train Set Size | 733,710 |
 | Test Set Size | 314,826 |
-| Logistic Regression |  (AUC-ROC Score)	0.53 |
+| Logistic Regression F1-Score |	0.628 |
+| Logistic Regression F1-Score |	0.53 |
+| Logistic Regression F1-Score |	0.53 |
 
 
 Table 4.2 – Confusion Matrix
