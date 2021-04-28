@@ -10,13 +10,15 @@ The success of this platform depends on the employees of the organizations to ma
 ### 1.2 Project Aim
 This analysis looks to study the potential predictive nature of variables i) workload related factors (i.e. number of commits by employee in their initial months) and ii) the stability of the work environment (i.e. work staff changes in the employee’s initial months) on employee engagement/disengagement. We consider an employee is “possibly_disengaged”, if we see a drastic reduction in their number of commits in the future months compared to their participation in the initial months to an organization. If we see no such drastic reduction, we label those employees as “no_signs”. We take the first six months as the beginning months of a developer as the baseline period. Our analysis will focus on the developers committing to the Apache Github organization.
 
-### 1.3 Hypothesis
+### 1.3 Adaptation From Selected Paper
+This analysis attempts to reproduce the analytical methodology of a research paper [1]. One of the research questions addressed in the selected paper is “Given a developer’s first six monthly report data, can we effectively predict whether the developer will leave the company or not (i.e. not-retained vs. retained) after he/she enters the company for one year?”. For this analysis, the following research question is explored, “Given a developer’s first six months of commit activity towards a Github organization, can we effectively predict whether or not a developer will disengage from the organization in the future?”
+
+### 1.4 Hypothesis
+Two factors are considered in this analysis that is thought to be predictive of future disengagement i.e. workload related factors and environmental stability factors.
+
 In terms of workload related factors, it is hypothesized that high workload in the beginning months (i.e. first six months of since a person's first commit to a Github organization) is predictive of future disengagement. 
 
-In terms of work environment stability related factors, it is hypothesized that frequent changes in the committer team personnel to manage a repo contributes to an unstable work environment and is also predictive of future disengagement.
-
-### 1.4 Adaptation From Selected Paper
-This analysis attempts to reproduce the analytical methodology of a research paper [1]. One of the research questions addressed in the selected paper is “Given a developer’s first six monthly report data, can we effectively predict whether the developer will leave the company or not (i.e. not-retained vs. retained) after he/she enters the company for one year?”. For this analysis, the following research question is explored, “Given a developer’s first six months of commit activity towards a Github organization, can we effectively predict whether or not a developer will disengage from the organization in the future?” If we 
+In terms of work environment stability related factors, it is hypothesized that frequent changes in the committer team is predictive of future disengagement.
 
 ## 2.	Data Preparation
 The dataset used was the commits table within the github_repos dataset available on Google BigQuery. We focus our analysis on the commit activity in repos within the Apache GitHub organization. Fig 2.1 provides an overview of the SQL code used to extract data from Google BigQuery. Fig 2.2 shows a snapshot of the pre-processed dataset. Table 2.1 provides a high level overview of the dataset.
