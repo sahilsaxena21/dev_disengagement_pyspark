@@ -14,9 +14,9 @@ This analysis looks to study the potential predictive nature of variables i) wor
 This analysis attempts to reproduce the analytical methodology of a research paper [1]. One of the research questions addressed in the selected paper is “Given a developer’s first six monthly report data, can we effectively predict whether the developer will leave the company or not (i.e. not-retained vs. retained) after he/she enters the company for one year?”. For this analysis, the following research question is explored, “Given a developer’s first six months of commit activity towards a Github organization, can we effectively predict whether or not a developer will disengage from the organization in the future?”
 
 ### 1.4 Hypothesis
-Two factors are considered in this analysis that is thought to be predictive of future disengagement i.e. workload related factors and environmental stability factors.
+Two factors are considered in this analysis i.e. workload factors and environmental stability factors.
 
-In terms of workload related factors, it is hypothesized that high workload in the beginning months (i.e. first six months of since a person's first commit to a Github organization) is predictive of future disengagement. 
+In terms of workload related factors, it is hypothesized that high workload in the beginning months (i.e. first six months of since a person's first commit to a Github organization) is predictive of future disengagement.
 
 In terms of work environment stability related factors, it is hypothesized that frequent changes in the committer team is predictive of future disengagement.
 
