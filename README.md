@@ -1,4 +1,4 @@
-# **Predicting Github Developer Disengagement in PySpark**
+# **Predicting Github Developer Disengagement using PySpark**
 
 ## 1.	Introduction
 
